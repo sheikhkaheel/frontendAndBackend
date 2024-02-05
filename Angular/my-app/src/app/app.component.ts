@@ -5,12 +5,14 @@ import { GeneralDropDownComponent } from './general-drop-down/general-drop-down.
 import { DistrictDropDownComponent } from './district-drop-down/district-drop-down.component';
 import { StudentsDropdownComponent } from './students-dropdown/students-dropdown.component';
 import { CheckTempVarComponent } from './check-temp-var/check-temp-var.component';
+import { AddEditParentComponent } from './add-edit-parent/add-edit-parent.component';
+import { ListPatentComponent } from './list-patent/list-patent.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ParentComponent,GeneralDropDownComponent,DistrictDropDownComponent,StudentsDropdownComponent,CheckTempVarComponent],
+  imports: [RouterOutlet, ParentComponent,GeneralDropDownComponent,DistrictDropDownComponent,StudentsDropdownComponent,CheckTempVarComponent,AddEditParentComponent,ListPatentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

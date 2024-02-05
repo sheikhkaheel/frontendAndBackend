@@ -1,0 +1,21 @@
+<addParent (angularEvt)="addUserToList($event)"></addParent>
+
+<div class="container">
+    <table class="table table-striped my-4">
+        <caption>List of Parents</caption>
+        <thead>
+            <tr>
+                <th scope="col" class="p-2">Email</th>
+                <th scope="col" class="p-2">FirstName</th>
+                <th scope="col" class="p-2">LastName</th>
+            </tr>
+        </thead>   
+        <tbody>
+            <tr *ngFor = "let parents of parentList">
+                <td class="p-2">{{parents.email}}</td>
+                <td class="p-2">{{parents.firstName}}</td>
+                <td class="p-2">{{parents.lastName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
