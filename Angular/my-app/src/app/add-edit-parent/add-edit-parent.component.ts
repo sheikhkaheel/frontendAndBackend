@@ -11,14 +11,20 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddEditParentComponent {
 
+
 addParent: parentModel = { email: '',firstName: '',lastName: '' };
 
+@Input()
+adduser: parentModel = { email: '',firstName: '',lastName: '' };
 @Output()   
   angularEvt: EventEmitter<parentModel> = new EventEmitter<parentModel>();
   
-@Input()
-  SendData(){
-    this.angularEvt.emit(this.addParent);
-    this.addParent = { email: '', firstName: '', lastName: ''};
+
+  SendData(){this.adduser=this.addParent;
+    
+    this.angularEvt.emit(this.adduser);
+   this.addParent = { email: '', firstName: '', lastName: ''};
   }
+
+
 }

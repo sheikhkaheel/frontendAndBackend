@@ -3,9 +3,9 @@
   <form #myForm="ngForm" (ngSubmit)="SendData()">
     <div class="row">
       <div class="col">
-        <label for="p-email">Email</label>
-        <input type="email" name="p-email" [(ngModel)]="addParent.email" class="form-control" id="p-email" />
-        {{addParent.email}}
+        <label for="email">Email</label>
+        <input type="text" name="email" [(ngModel)]="addParent.email"  class="form-control" />
+      
       </div>
     </div>
     <div class="row">
