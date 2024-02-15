@@ -1,0 +1,29 @@
+<div class="container table-responsive">
+  <table class="table-bordered table-hover">
+    <caption>List of Wazas</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="p-2">UserId</th>
+        <th scope="col" class="p-2">FirstName</th>
+        <th scope="col" class="p-2">MiddleName</th>
+        <th scope="col" class="p-2">LastName</th>
+        <th scope="col" class="p-2">CompanyName</th>
+        <th scope="col" class="p-2">PhoneNo</th>
+        <th scope="col" class="p-2">YearsOfExp</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let waza of wazas">
+        <td class="p-2">{{waza.userId}}</td>
+        <td class="p-2">{{waza.firstName}}</td>
+        <td class="p-2">{{waza.middleName}}</td>
+        <td class="p-2">{{waza.lastName}}</td>
+        <td class="p-2">{{waza.companyName}}</td>
+        <td class="p-2">{{waza.phoneNo}}</td>
+        <td class="p-2">{{waza.yearOfExp}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" class="btn btn-secondary form-control my-3" value="GetWazas" (lo)="get()"/>
+</div>

@@ -1,0 +1,29 @@
+<div class="container table-responsive">
+  <table class="table table-bordered table-hover">
+    <caption>List of Parents</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="p-2">Email</th>
+        <th scope="col" class="p-2">HeadOfFamily</th>
+        <th scope="col" class="p-2">FirstName</th>
+        <th scope="col" class="p-2">MiddleName</th>
+        <th scope="col" class="p-2">LastName</th>
+        <th scope="col" class="p-2">Gender</th>
+        <!--<th scope="col" class="p-2">PhoneNo</th>-->
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let parent of parents">
+        <td class="p-2">{{parent.email}}</td>
+        <td class="p-2">{{parent.familyHead}}</td>
+        <td class="p-2">{{parent.firstName}}</td>
+        <td class="p-2">{{parent.middleName}}</td>
+        <td class="p-2">{{parent.lastName}}</td>
+        <td class="p-2">{{parent.gender}}</td>
+        <!--<td class="p-2">{{parent.phoneNo}}</td>-->
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" class="btn btn-success form-control" value="GetParents" (click)="save(putParentDTO)"/>
+</div>

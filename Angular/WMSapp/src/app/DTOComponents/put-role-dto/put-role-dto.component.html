@@ -1,0 +1,26 @@
+<div class="container table-responsive">
+  <table class="table table-bordered table-hover">
+    <caption>List of Roles</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="p-2">RoleName</th>
+        <th scope="col" class="p-2">IsSuperAdmin</th>
+        <th scope="col" class="p-2">IsAdmin</th>
+        <th scope="col" class="p-2">IsParent</th>
+        <th scope="col" class="p-2">IsWaza</th>
+        <th scope="col" class="p-2">IsActive</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let role of roles">
+        <td class="p=2">{{role.roleName}}</td>
+        <td class="p=2">{{role.isSuperAdmin}}</td>
+        <td class="p=2">{{role.isAdmin}}</td>
+        <td class="p=2">{{role.isParent}}</td>
+        <td class="p=2">{{role.isWaza}}</td>
+        <td class="p=2">{{role.isActive}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" class="btn btn-primary form-control mb-3" (click)="save(putRoleDTO)" value="GetRoles"/>
+</div>

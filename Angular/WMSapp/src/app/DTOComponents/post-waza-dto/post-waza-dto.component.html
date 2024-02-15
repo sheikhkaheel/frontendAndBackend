@@ -1,0 +1,42 @@
+<div class="container">
+  <h3 class="my-4">Waza</h3>
+  <form>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="w-fname">FirstName</label>
+        <input type="text" name="w-fname" id="w-fname" class="form-control" />
+      </div>
+      <div class="col">
+        <label for="w-lname">LastName</label>
+        <input type="text" name="w-lname" id="w-lname" class="form-control" />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w-mname">MiddleName</label>
+        <input type="text" name="w-mname" id="w-mname" class="form-control" />
+      </div>
+      <div class="col">
+        <label for="w-companyName">CompanyName</label>
+        <input type="text" name="w-companyName" id="w-companyName" class="form-control"/>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w-phoneNo">PhoneNo</label>
+        <input type="number" name="w-phoneNo" id="w-phoneNo" class="form-control"/>
+      </div>
+      <div class="col">
+        <label for="w-yearOfExp">YearOfExp</label>
+        <input type="text" name="w-yearOfExp" id="w-yearsOfExp" class="form-control"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="w-userId">UserID</label>
+        <input type="number" name="w-userId" id="w-userId" class="form-control"/>
+      </div>
+    </div>
+    <input type="button" class="btn btn-secondary form-control mt-5" value="Save" (click)="bind()" />
+  </form>
+</div>
