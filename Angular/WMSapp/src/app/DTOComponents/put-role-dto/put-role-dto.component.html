@@ -4,6 +4,8 @@
     <thead>
       <tr>
         <th scope="col" class="p-2">RoleName</th>
+        <th scope="col" class="p-2">DisplayName</th>
+        <th scope="col" class="p-2">RoleDiscription</th>
         <th scope="col" class="p-2">IsSuperAdmin</th>
         <th scope="col" class="p-2">IsAdmin</th>
         <th scope="col" class="p-2">IsParent</th>
@@ -13,14 +15,16 @@
     </thead>
     <tbody>
       <tr *ngFor="let role of roles">
-        <td class="p=2">{{role.roleName}}</td>
-        <td class="p=2">{{role.isSuperAdmin}}</td>
-        <td class="p=2">{{role.isAdmin}}</td>
-        <td class="p=2">{{role.isParent}}</td>
-        <td class="p=2">{{role.isWaza}}</td>
-        <td class="p=2">{{role.isActive}}</td>
+        <td class="p=2">{{role.roleName}}</td>      
+        <td class="p=2">{{role.displayName}}</td>          
+        <td class="p=2">{{role.roleDescription}}</td>          
+        <td class="p=2"><i *ngIf="role.isSuperAdmin" class="fas fa-check"></i><i *ngIf="!role.isSuperAdmin" class="fas fa-times"></i></td>
+        <td class="p=2"><i *ngIf="role.isAdmin" class="fas fa-check"></i><i *ngIf="!role.isAdmin" class="fas fa-times"></i></td>
+        <td class="p=2"><i *ngIf="role.isParent" class="fas fa-check"></i><i *ngIf="!role.isParent" class="fas fa-times"></i></td>
+        <td class="p=2"><i *ngIf="role.isWaza" class="fas fa-check"></i><i *ngIf="!role.isWaza" class="fas fa-times"></i></td>
+        <td class="p=2"><i *ngIf="role.isActive" class="fas fa-check"></i><i *ngIf="!role.isActive" class="fas fa-times"></i></td>
       </tr>
-    </tbody>
+    </tbody>    
   </table>
   <input type="button" class="btn btn-primary form-control mb-3" (click)="save(putRoleDTO)" value="GetRoles"/>
 </div>

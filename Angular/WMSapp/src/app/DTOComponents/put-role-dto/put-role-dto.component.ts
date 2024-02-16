@@ -14,14 +14,15 @@ import { throwError } from 'rxjs';
 })
 export class PutRoleDTOComponent {
   putRoleDTO: PutRoleDTO = {
-      roleId: '',
-      roleName: '',
-      displayName: '',
-      isSuperAdmin: false,
-      isAdmin: false,
-      isParent: false,
-      isWaza: false,
-      isActive: true
+    roleId: '',
+    roleName: '',
+    displayName: '',
+    isSuperAdmin: false,
+    isAdmin: false,
+    isParent: false,
+    isWaza: false,
+    isActive: true,
+    roleDescription: ''
   };
 
   roles: PutRoleDTO[] = [];

@@ -10,7 +10,7 @@ import { UserService } from '../../Services/user.service';
   templateUrl: './put-user-dto.component.html',
   styleUrl: './put-user-dto.component.css'
 })
-export class PutUserDTOComponent implements OnInit {
+export class PutUserDTOComponent {
 
   putUserDTO: PutUserDTO = {
       userId: '',
@@ -22,13 +22,11 @@ export class PutUserDTOComponent implements OnInit {
       password: ''
   }
 
-  constructor(private userService: UserService){ }
+  constructor(private userService: UserService){
+    this.userService.get(this.putUserDTO);
+    this.users = this.userService.lists;
+  }
 
   users: PutUserDTO[] = [];
-
-    ngOnInit(): void {
-    this.userService.get(this.putUserDTO);
-    this.users = this.userService.lists
-  }
   
 }
