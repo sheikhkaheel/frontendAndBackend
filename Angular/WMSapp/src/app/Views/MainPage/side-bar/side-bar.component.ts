@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PutUserDTOComponent } from '../../../DTOComponents/put-user-dto/put-user-dto.component';
+import { MenuRoleComponent } from "../../Common/MenuItems/menu-role/menu-role.component";
 
 @Component({
-  selector: 'SideBar',
-  standalone: true,
-  imports: [RouterLink,PutUserDTOComponent],
-  templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.css'
+    selector: 'SideBar',
+    standalone: true,
+    templateUrl: './side-bar.component.html',
+    styleUrl: './side-bar.component.css',
+    imports: [RouterLink, MenuRoleComponent]
 })
 export class SideBarComponent {
   

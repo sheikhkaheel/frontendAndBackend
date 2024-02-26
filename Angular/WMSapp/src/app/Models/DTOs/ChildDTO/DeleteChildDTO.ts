@@ -1,4 +1,6 @@
-﻿class DeleteChildDTO extends PutChildDTO {
+﻿import { PutChildDTO } from "./PutChildDTO";
+
+export class DeleteChildDTO extends PutChildDTO {
 
 }
 

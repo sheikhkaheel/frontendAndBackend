@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PutUserDTO } from '../Models/DTOs/UserDTO/PutUserDTO';
+import { User } from '../Models/WmsModels/User';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +8,9 @@ export class UserService {
 
   constructor() { }
 
-  lists: PutUserDTO[] = [];
+  lists: User[] = [];
 
-  get(putUserDTO: PutUserDTO) {
+  get(user: User) {
 
 
     const url = 'https://localhost:7102/api/User';

@@ -1,1 +1,46 @@
-<p>add-role works!</p>
+<div class="container">
+    <h3>Role</h3>
+    <form action="#">
+        <!-- <label for="txtroleName">Role Name</label>
+        <input type="text" [(ngModel)]="role.roleName" id="txtroleName" class="form-control mb-3" name="txtroleName" placeholder="type role..."> <span id="validateRoleName"></span> -->
+
+        <label for="r_roleName">Role Name</label>
+        <select name="roleName" class="form-control mb-2" id="r_roleName">
+            <option value="SuperAdmin">SuperAdmin</option>
+            <option value="SuperAdmin">Admin</option>
+            <option value="SuperAdmin">Parent</option>
+            <option value="SuperAdmin">Child</option>
+            <option value="SuperAdmin">Waza</option>
+            <option value="SuperAdmin">Guest</option>
+        </select>
+
+        <label for="txtdisplayName">Display Name</label> 
+        <input type="text" [(ngModel)]="role.displayName" id="txtdisplayName" class="form-control" name="txtdisplayName" placeholder="type display name..."> <span id="validateDisplayName"></span> <br>
+
+        <label for="roleDescription">Role Description</label> <br>
+        <textarea [(ngModel)]="role.roleDescription" id="roleDescription" class="form-control" name="roleDescription" rows="4" cols="50"></textarea> <br>
+        
+        <label for="chkisSuperAdmin">IsSuperAdmin</label>
+        <input type="checkbox" [(ngModel)]="role.isSuperAdmin" class="mx-1" name="chkisSuperAdmin" id="chkisSuperAdmin">  <br>
+        
+        <label for="chkisAdmin">IsAdmin</label>
+        <input type="checkbox" [(ngModel)]="role.isAdmin" class="mx-1" name="chkisAdmin" id="chkisAdmin">  <br>
+        
+        <label for="chkisParent">isParent</label>
+        <input type="checkbox" [(ngModel)]="role.isParent" class="mx-1" id="chkisParent" name="chkisParent">  <br>
+        
+        <label for="chkisWaza">IsWaza</label>
+        <input type="checkbox" [(ngModel)]="role.isWaza" class="mx-1" id="chkisWaza" name="chkisWaza"> <br>
+
+        <label for="chkisChild">IsChild</label>
+        <input type="checkbox" [(ngModel)]="role.isChild" class="mx-1" id="chkisChild" name="chkisChild"> <br>
+
+        <label for="chkisGuest">IsGuest</label>
+        <input type="checkbox" [(ngModel)]="role.isGuest" class="mx-1" id="chkisGuest" name="chkisGuest"> <br>
+        
+        <label for="chkisActive">IsActive</label>
+        <input type="checkbox" [(ngModel)]="role.isActive" class="mx-1" id="chkisActive" name="chkisActive" checked> <br>
+        
+        <input type="button" class="btn btn-primary form-control my-2" value="save" (click)="Create()">
+    </form>    
+</div>

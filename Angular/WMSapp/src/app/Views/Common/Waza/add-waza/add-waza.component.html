@@ -1,1 +1,76 @@
-<p>add-waza works!</p>
+<div class="container">
+  <h3 class="mb-3">Waza</h3>
+  <form>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="w-fname">FirstName</label>
+        <input placeholder="firstname" type="text" name="w-fname" id="w-fname" class="form-control" />
+      </div>
+      <div class="col">
+        <label for="w-mname">MiddleName</label>
+        <input placeholder="middlename" type="text" name="w-mname" id="w-mname" class="form-control" />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w-lname">LastName</label>
+        <input placeholder="lastname" type="text" name="w-lname" id="w-lname" class="form-control" />
+      </div>
+      <div class="col">
+        <label for="w-companyName">CompanyName</label>
+        <input placeholder="CompanyName" type="text" name="w-companyName" id="w-companyName" class="form-control" />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w-phoneNo">PhoneNo</label>
+        <input placeholder="phone no" type="number" name="w-phoneNo" id="w-phoneNo" class="form-control" />
+      </div>
+      <div class="col">
+        <label for="w-yearOfExp">YearOfExp</label>
+        <input placeholder="experience" type="text" name="w-yearOfExp" id="w-yearsOfExp" class="form-control" />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w-userId">UserID</label>
+        <input placeholder="userId" type="number" name="w-userId" id="w-userId" class="form-control" />
+      </div>
+      <div class="col">
+        <label for="w_address">Address</label>
+        <input placeholder="address" type="text" name="w_address" id="w_address" class="form-control" />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w_latitude">Latitude And Longitude</label>
+        <input type="text" placeholder="latitude and longitude" name="w_latitude" class="form-control">
+      </div>
+      <div class="col">
+        <label for="w_age">Age</label>
+        <input type="datetime-local" name="w_age" class="form-control">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w_yearsOfExp">Years Of Experience</label>
+        <input type="number" name="w_yearsOfExp" class="form-control" placeholder="yearsofexperince">
+      </div>
+      <div class="col">
+        <label for="w_phone">PhoneNo</label>
+        <input type="number" name="w_phone" class="form-control" placeholder="phone no">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="w_rateOfMeatPer100Kg">Rate Of Meat Per 100kg</label>
+        <input type="text" name="w_rateOfMeatPer100Kg" class="form-control" placeholder="rateOfMeatPer100Kg">
+      </div>
+      <div class="col">
+        <label for="w_rateOfChickenPer100Kg">Rate of Chicken Per 100kg</label>
+        <input type="text" name="w_rateOfChickenPer100Kg" class="form-control" placeholder="rateOfChickenPer100Kg">
+      </div>
+    </div>
+    <input type="button" class="btn btn-secondary form-control mt-4" value="Save" (click)="bind()" />
+  </form>
+</div>

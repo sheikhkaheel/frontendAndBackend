@@ -1,1 +1,101 @@
-<p>add-parent works!</p>
+<h3>Parent</h3>
+<div class="container">
+  <form #myForm="ngForm" (ngSubmit)="SaveIT(myForm)">
+    <div class="row">
+      <div class="col">
+        <label for="p-email">Email</label>
+        <input placeholder="email" type="email" name="p-email" class="form-control my-1" id="p-email" />
+        <span id="er1" class="text-danger"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="txtfname">FirstName</label>
+        <input placeholder="firstName" type="text" class="form-control my-1" name="fname" id="tfname">
+        <span id="er2"></span>
+      </div>
+      <div class="col">
+        <label for="txtmname">MiddleName</label>
+        <input placeholder="middleName" type="text" class="form-control my-1" name="mname" id="tmname">
+        <span id="er3"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="txtlname">LastName</label>
+        <input placeholder="lastName" type="text" class="form-control my-1" name="lname" id="tlname">
+        <span id="er4"></span>
+      </div>
+      <div class="col">
+        <label for="txtphone">PhoneNo</label>
+        <input placeholder="phoneNo" type="text" class="form-control my-1" name="phone" id="tphone">
+        <span id="er5"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="datedob">D.O.B</label>
+        <input type="datetime-local" class="form-control my-1" name="date" id="datedob">
+        <span id="er6" class="text-danger"></span>
+      </div>
+      <div class="col">
+        <label for="userId">UserID</label>
+        <input type="number" class="form-control mt-1" name="userId" id="numuserId" >
+        <span id="er7"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="mt-2">IsFamilyHead</label> <br>
+        <input type="radio" class="mt-1 mx-1" name="familyHead" id="head" value="Yes">
+        <label for="head">Yes</label>
+        <input type="radio" class="mx-1" id="notHead" name="familyHead" value="No">
+        <label for="notHead">No</label>
+        <br /><span id="er8" class="text-danger"></span>
+      </div>
+      <div class="col">
+        <label class="mt-2">Gender</label> <br>
+        <input type="radio" name="gender" class="mt-1 mx-1" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" class="mx-1" value="female" id="female" name="gender">
+        <label for="female">Female</label>
+        <br /><span id="er9" class="text-danger"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="p_prefix">Prefix</label>
+        <input type="text" name="p_prefix" class="form-control mb-2" placeholder="prefix">
+      </div>
+      <div class="col">
+        <label for="p_address">Address</label>
+        <input type="text" name="p_address" class="form-control mb-2" placeholder="address">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="p_wifeFname">Wife FirstName</label>
+        <input type="text" name="p_wifeFname" id="p_wifeFname" class="form-control mb-2" placeholder="firstName ">
+      </div>
+      <div class="col">
+        <label for="p_wifenLame">Wife LastName</label>
+        <input type="text" name="p_wifenLame" id="p_wifenLame" class="form-control mb-2" placeholder="lastName ">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="p_houseImg">House Img</label> <br>
+        <input type="file" name="p_houseImg" class="form-control mb-2">
+      </div>
+      <div class="col">
+        <label for="p_latitute">Latitude And Longitude</label> <br>
+        <input type="text" name="p_latitute" class="form-control mb-2">
+      </div>
+    </div>
+    <div class="row mt-2">
+      <input type="submit" class=" form-control btn btn-success" value="Save" (click)="bind()">
+    </div>
+  </form>
+
+</div>
