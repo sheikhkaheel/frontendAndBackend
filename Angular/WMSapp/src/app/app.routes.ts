@@ -14,6 +14,8 @@ import { WazaCategoryComponent } from './Views/Common/Waza/WazaCategory/waza-cat
 import { MangeChildsComponent } from './Views/Common/Child/mange-childs/mange-childs.component';
 import { ListOfSpicesComponent } from './Views/Common/Spices/list-of-spices/list-of-spices.component';
 import { AddSpiceComponent } from './Views/Common/Spices/add-spice/add-spice.component';
+import { ManageVegetablesComponent } from './Views/Common/Vegetable/manage-vegetables/manage-vegetables.component';
+import { AddVegetableComponent } from './Views/Common/Vegetable/add-vegetable/add-vegetable.component';
 
 export const routes: Routes = [
     // {path: 'getUsers', component:PutUserDTOComponent},
@@ -40,5 +42,7 @@ export const routes: Routes = [
     {path: 'WazaCategory', component:WazaCategoryComponent},
     {path: 'spices', component:ListOfSpicesComponent},
     {path: 'addSpice', component:AddSpiceComponent},
+    {path: 'vegetables', component:ManageVegetablesComponent},
+    {path: 'addVegetable', component:AddVegetableComponent},
     
 ];

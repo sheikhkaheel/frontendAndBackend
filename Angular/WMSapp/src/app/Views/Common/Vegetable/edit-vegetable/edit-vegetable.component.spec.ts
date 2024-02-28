@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuWazaComponent } from './menu-waza.component';
+import { EditVegetableComponent } from './edit-vegetable.component';
 
-describe('MenuWazaComponent', () => {
-  let component: MenuWazaComponent;
-  let fixture: ComponentFixture<MenuWazaComponent>;
+describe('EditVegetableComponent', () => {
+  let component: EditVegetableComponent;
+  let fixture: ComponentFixture<EditVegetableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuWazaComponent]
+      imports: [EditVegetableComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MenuWazaComponent);
+    fixture = TestBed.createComponent(EditVegetableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

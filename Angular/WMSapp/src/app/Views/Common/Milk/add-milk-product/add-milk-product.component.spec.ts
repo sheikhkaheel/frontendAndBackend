@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuParentComponent } from './menu-parent.component';
+import { AddMilkProductComponent } from './add-milk-product.component';
 
-describe('MenuParentComponent', () => {
-  let component: MenuParentComponent;
-  let fixture: ComponentFixture<MenuParentComponent>;
+describe('AddMilkProductComponent', () => {
+  let component: AddMilkProductComponent;
+  let fixture: ComponentFixture<AddMilkProductComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuParentComponent]
+      imports: [AddMilkProductComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MenuParentComponent);
+    fixture = TestBed.createComponent(AddMilkProductComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
