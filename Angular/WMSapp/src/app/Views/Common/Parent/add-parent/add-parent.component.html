@@ -1,4 +1,4 @@
-<h3>Parent</h3>
+<h3>Parent</h3>  <h4 class="text-right"><button class="btn btn-success"><a routerLink="/child">Add Child</a></button></h4>
 <div class="container">
   <form #myForm="ngForm" (ngSubmit)="SaveIT(myForm)">
     <div class="row">
@@ -66,11 +66,26 @@
     <div class="row">
       <div class="col">
         <label for="p_prefix">Prefix</label>
-        <input type="text" name="p_prefix" class="form-control mb-2" placeholder="prefix">
+        <select name="p_prefix" id="p_prefix" class="form-control">
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Er">Er</option>
+          <option value="Dr">Dr</option>
+        </select>
       </div>
       <div class="col">
-        <label for="p_address">Address</label>
-        <input type="text" name="p_address" class="form-control mb-2" placeholder="address">
+        <label for="p_houseImg">House Img</label> <br>
+        <input type="file" name="p_houseImg" class="form-control mb-2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="p_latitude">Latitude</label>
+        <input type="text" name="p_latitude" class="form-control" placeholder="latitude">
+      </div>
+      <div class="col">
+        <label for="p_longitude">Longitude</label> <br>
+        <input type="text" name="p_longitude" class="form-control mb-2" placeholder="longitude">
       </div>
     </div>
     <div class="row">
@@ -83,14 +98,10 @@
         <input type="text" name="p_wifenLame" id="p_wifenLame" class="form-control mb-2" placeholder="lastName ">
       </div>
     </div>
-    <div class="row">
+    <div class="row mb-3">
       <div class="col">
-        <label for="p_houseImg">House Img</label> <br>
-        <input type="file" name="p_houseImg" class="form-control mb-2">
-      </div>
-      <div class="col">
-        <label for="p_latitute">Latitude And Longitude</label> <br>
-        <input type="text" name="p_latitute" class="form-control mb-2">
+        <label for="p_address">Address</label>
+        <textarea id="p_address" name="address" rows="3" class="form-control"></textarea>
       </div>
     </div>
     <div class="row mt-2">

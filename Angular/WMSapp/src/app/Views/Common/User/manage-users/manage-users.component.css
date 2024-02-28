@@ -2,3 +2,10 @@ button{
     border: 0px;
     background-color: transparent;
 }
+
+.dropdown{
+    border:1.5px solid rgb(218, 215, 215);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    font-size: medium;
+}

@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { User } from '../../../../Models/WmsModels/User';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'user',
   standalone: true,
-  imports: [],
+  imports: [FormsModule,RouterLink],
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.css'
 })
@@ -13,7 +16,7 @@ export class AddUserComponent {
   public user: User = {
     userId: '',
     roleId: '',
-    userCode: '',
+    userCode: `Par${Math.floor(Math.random() * 900 )+ 100}`,
     firstName: '',
     middleName: '',
     lastName: '',
@@ -23,10 +26,14 @@ export class AddUserComponent {
     createdOn: '',
     modifiedBy: '',
     modifiedOn: '',
-    isDeleted: ''
+    isDeleted: '',
+    email: '',
+    phoneNo: '',
+    dob: ''
   }
 
   bind() {
+    alert(Math.floor(Math.random() * 900 )+ 100);
     let txtfname = document.getElementById('txtfname') as HTMLInputElement;
     let txtmname = document.getElementById('txtmname') as HTMLInputElement;
     let txtlname = document.getElementById('txtlname') as HTMLInputElement;

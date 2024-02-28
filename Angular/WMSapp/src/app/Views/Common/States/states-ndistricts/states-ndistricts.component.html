@@ -1,11 +1,40 @@
-<div class="continer">
-    <h3 class="py-3">Districts</h3>
-    <select name="state" class="form-control">
-        <option value="0">--Select District--</option>
-        <option value="Sringar">Sringar</option>
-        <option value="Ganderbal">Ganderbal</option>
-        <option value="Sopore">Sopore</option>
-        <option value="Pulwama">Pulwama</option>
-        <option value="Ori">Ori</option>
+<div class="container">
+    <h3 class="py-3">Country</h3>
+    <select name="country" class="form-control">
+        <option value="India">India</option>
     </select>
+
+    <h3 class="py-3">State</h3>
+    <select name="state" id="state" (change)="SelectState($event)" class="form-control" required>
+        <option value="">--Select State--</option> <!-- Add an empty option -->
+        <option value="JammuAndKashmir">JammuAndKashmir</option>
+        <option value="Delhi">Delhi</option> <!-- Corrected the spelling of Delhi -->
+    </select>
+
+    <h3 class="py-3">Districts</h3>
+    <select name="district" class="form-control" required>
+        <option *ngIf="selectedState === 'JammuAndKashmir'" value="">--Select District--</option>
+        <option *ngIf="selectedState === 'JammuAndKashmir'" value="Srinagar">Srinagar</option>
+        <option *ngIf="selectedState === 'JammuAndKashmir'" value="Ganderbal">Ganderbal</option>
+        <!-- Add more options for other states similarly -->
+        <option *ngIf="selectedState === 'Delhi'" value="">--Select District--</option>
+        <option *ngIf="selectedState === 'Delhi'" value="Central Delhi">Central Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="East Delhi">East Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="New Delhi">New Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="North Delhi">North Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="North East Delhi">North East Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="North West Delhi">North West Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="South Delhi">South Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="South East Delhi">South East Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="South West Delhi">South West Delhi</option>
+        <option *ngIf="selectedState === 'Delhi'" value="West Delhi">West Delhi</option>
+    </select>
+    <div class="row my-5">
+        <div class="col">
+            <input type="submit" value="Save" class="form-control btn btn-success">
+        </div>
+        <div class="col">
+            <input type="button" value="Back" class="form-control btn btn-secondary">
+        </div>
+    </div>
 </div>

@@ -12,6 +12,8 @@ import { WazaAchievementsComponent } from './Views/Common/Waza/waza-achievements
 import { StatesNDistrictsComponent } from './Views/Common/States/states-ndistricts/states-ndistricts.component';
 import { WazaCategoryComponent } from './Views/Common/Waza/WazaCategory/waza-category/waza-category.component';
 import { MangeChildsComponent } from './Views/Common/Child/mange-childs/mange-childs.component';
+import { ListOfSpicesComponent } from './Views/Common/Spices/list-of-spices/list-of-spices.component';
+import { AddSpiceComponent } from './Views/Common/Spices/add-spice/add-spice.component';
 
 export const routes: Routes = [
     // {path: 'getUsers', component:PutUserDTOComponent},
@@ -36,5 +38,7 @@ export const routes: Routes = [
     {path: 'WazaAchievements', component:WazaAchievementsComponent},
     {path: 'States', component:StatesNDistrictsComponent},
     {path: 'WazaCategory', component:WazaCategoryComponent},
+    {path: 'spices', component:ListOfSpicesComponent},
+    {path: 'addSpice', component:AddSpiceComponent},
     
 ];

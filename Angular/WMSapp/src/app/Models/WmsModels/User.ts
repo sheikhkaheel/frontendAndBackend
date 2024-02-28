@@ -8,6 +8,9 @@ export class User extends CommonFields
     public firstName:string = ''; 
     public middleName:string = ''; 
     public lastName:string = ''; 
+    public email:string = '';
+    public phoneNo:string = '';
+    public dob:string = '';
     public userName:string = ''; 
     public password:string = ''; 
 

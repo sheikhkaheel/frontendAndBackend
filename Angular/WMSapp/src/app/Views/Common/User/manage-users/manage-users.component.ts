@@ -25,7 +25,10 @@ export class ManageUsersComponent {
     createdOn: '',
     modifiedBy: '',
     modifiedOn: '',
-    isDeleted: ''
+    isDeleted: '',
+    email: '',
+    phoneNo: '',
+    dob: ''
   }
 
   constructor(private userService: UserService){

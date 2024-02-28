@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Parent } from '../../../../Models/WmsModels/Parent';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'parent',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,RouterLink],
   templateUrl: './add-parent.component.html',
   styleUrl: './add-parent.component.css'
 })

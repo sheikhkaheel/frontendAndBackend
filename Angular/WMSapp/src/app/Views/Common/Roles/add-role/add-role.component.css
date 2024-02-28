@@ -1,0 +1,10 @@
+.fieldset{
+    border: 2px solid rgb(154, 154, 154) !important;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+legend{
+    color: rgb(102, 101, 101);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
