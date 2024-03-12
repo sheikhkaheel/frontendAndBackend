@@ -8,7 +8,7 @@ function Form() {
     });
 
     let handleInputChange = (event) => {
-        
+
         let fieldName = event.target.name;
         let fieldValue = event.target.value;
 
@@ -17,7 +17,7 @@ function Form() {
         });
     };
 
-    let onSubmit = (event) => {
+    let onSubmition = (event) => {
         event.preventDefault();
         console.log(formData);
         setFormData({
@@ -29,7 +29,7 @@ function Form() {
     return (
         <div className='container'>
             <h2>Form</h2>
-            <form onClick={onSubmit}>
+            <form onSubmit={onSubmition}>
                 <div className='row mb-3'>
                     <div className='col'>
                         <label htmlFor='userName'>User Name</label>
