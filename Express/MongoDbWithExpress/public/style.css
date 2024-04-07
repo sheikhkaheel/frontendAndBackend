@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.chat {
+    background-color: lightblue;
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+
+.msg p {
+    background-color: blue;
+    color: white;
+    border-radius: 1rem;
+    padding: .3rem .8rem;
+}
+
