@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(221, 227, 232);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.chat {
+    background-color: white;
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+
+.msg p {
+    background-color: rgb(41, 56, 133);
+    color: white;
+    border-radius: 1rem;
+    padding: .3rem .8rem;
+}
+
