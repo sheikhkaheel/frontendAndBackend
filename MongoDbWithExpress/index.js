@@ -38,7 +38,7 @@ app.delete('/chats/:id', async(req,res) => {
 app.put('/chats/:id', async(req,res) => {
   let { id } = req.params;
   let {msg : newChat} = req.body;
-  let updateChat = await Chat.findByIdAndUpdate(id, {msg: newChat}, {runValidators: true,new: true});
+  let updateChat = await Chat.findByIdAndUpdate(id, {msg: newChat, updated_at : new Date()}, {runValidators: true,new: true});
 
   console.log(updateChat);
   res.redirect('/chats')

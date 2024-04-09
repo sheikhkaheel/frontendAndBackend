@@ -23,12 +23,17 @@
                 <span>To : <%= chat.to %>
                 </span>
                 <div class="msg">
-                    <p>Message : <%= chat.msg %>
+                    <p><%= chat.msg %>
                     </p>
                 </div>
 
+                <h5>Created ON</h5>
                 <span><%= chat.created_at.toString().split(" ")[4] %></span> <br>
                 <span><%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %></span>
+
+                <h5>Updated On</h5>
+                <span><%= chat.updated_at.toString().split(" ")[4] %></span> <br>
+                <!-- <span><%= chat.updated_at %></span> -->
 
                 <br><br>
                 

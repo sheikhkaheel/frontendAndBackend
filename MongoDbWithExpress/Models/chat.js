@@ -12,10 +12,14 @@ const chatSchema = new mongoose.Schema({
     msg:{
         type: 'string',
         required:true,
-        maxLength:50
+        maxLength:60
     },
     created_at:{
         type:Date
+    },
+    updated_at:{
+        type:Date,
+        default:new Date().toString().split(" ").slice(0,4)
     }
 })
 

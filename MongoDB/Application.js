@@ -9,25 +9,40 @@ async function main() {
 }
 
 const UserSchema =  mongoose.Schema({
+  username:{
+    type:'string',
+    default: '@example',
+  },
   email:{
     type: 'string',
-    required: true
+    required: true,
+    maxLength:[20,"Length Exceeded"]
   },
   password:{
     type:'string',
     required: true
+  },
+  category:{
+    type: 'string',
+    enum: ['User', 'Administrator']
   }
 })
 
 const User = mongoose.model('User', UserSchema);
 
-const User1 = new User({
-  email: 123,
-  password: 'password2'
-})
+// const User1 = new User({
+//   username:'sheikhmuhammad',
+//   email: 'muhammad@gmail.com',
+//   password: 'muhammad123',
+//   category:'Administrator'
+// })
 
-User1.save()
-.then ( res => console.log(res))
+// User1.save()
+// .then ( res => console.log(res))
+
+User.findByIdAndUpdate("66116e6e45c65ebdc536c0d8", {email: 'sheikaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}, {runValidators:true})
+.then( res => console.log(res))
+.catch(err => console.log(err.errors.email.properties.message))
 
 // User.findOneAndDelete({ email: 'user@example.com'}).then ( res => console.log(res));
 

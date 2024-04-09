@@ -1,0 +1,239 @@
+Monogodb Commands
+
+// show dbs  
+ -- used to show all the databases
+
+// use _name of database  
+ -- used to select specific data 
+
+// db._nameOfDataBase.insertOne({name:"Kaheel",performence:{marks:99,grade:"A"}})
+ -- used to insert one object in database/collections it can be a nested object too
+
+// db._nameOfDatabase.find({name:"kaheel"})
+ -- used to find all the objects with name "kaheel"
+
+// db._nameOfDatabase.findOne({name:"kaheel"})
+ -- used to find ony one object wth name "kaheel"
+
+// db.students.findOne({"performence.marks":99})
+ -- used to find nested object in db
+
+// db.students.deleteOne({name:"John"})
+ -- used to delete one object from db
+
+// db.students.deleteOne({marks:{$lt:75}})
+-- used to all objects with which the given condition matches
+
+// db.students.delelteMany({}) 
+ -- used to objects in db
+
+//db.dropDatabase 
+ -- used to delete current data base
+
+// using operators to find given data
+
+// db._nameOfDatabase.find({name:{$gt:75}})  $gt means greater then
+ -- used to find all the objects with makks greater then 75
+
+// db._nameOfDatabase.find({name:{$gte:75}})  $gt means greater then equal to
+ -- used to find all the objects with makks greater then 75
+
+// db._nameOfDatabase.find({city:{$in:["delhi","mumbai"]} })  $in means to find in array
+ -- used to find all the objects in city "delhi","mumbai"
+
+// db._nameOfDatabase.find({$or:[{city:"srinagar"}, {city:"ganderbal"}] })  $or means to find between two values
+ -- used to find the objects in cities "kashmit","ganderbal"
+
+// db._nameOfDatabase.updateOne({name:"Zaid"},{$set:{name:"Saalim}}) $set used to replace the existing field value
+ -- used to update given parameter in the object 
+
+// db._nameOfDatabase.updateMany({city:"Delhi"},{$set:{city:"Srinagar"}}) 
+ -- used to date many given fields value based on one related field name
+
+//  db._nameOfDatabase.replaceOne({name:"Zaid"},{name:"Saalim",marks:90,city:"Buspora"}) 
+ -- used to replace one object with another object but its id remains same
+
+// for more go on the website to check the other commands on mongobg.com
+
+
+What is Mongoose
+
+Its is a library that create connection between MongoDB and Node.js JavaScript Runtime Environment
+
+-- Its an ODM (Object Data Modeling) Library
+
+Go to Visual Studio Code and type these commads
+
+-- npm init -y
+-- npm i mongoose
+
+then create a javascript file and write these line of code
+
+const mongoose = require('mongoose');
+
+main()
+.then(res => console.log(res))
+.catch(err => console.log(err))
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/test');
+}
+
+What is Schema
+
+It defines the shape of the document within that collection
+
+const userSchema = new mongoose.Schema({
+    name:String,
+    email:String,
+    password:String,
+    age:Number,
+})
+
+What is Model in mongoose 
+
+Its a class with which we construct documents 
+
+const User = mongoose.model("User",userSchema);
+
+we can insert a object into over like this
+
+ const parent2 = new Parent({
+   name:'Eve',
+   email:"eve@gmail.com",
+   phoneNumber:9499543390
+ })
+
+or we can insert many object with in an array into out collections 
+
+Parent.insertMany([
+  { name:"Kaheel", email:"sheilkkaheel@gmail.com", phoneNumber: 6006307545, Age: 21 },
+  { name:"Zaid", email:"zaidtariq@gmail.com", phoneNumber: 6006997545, Age: 21 },
+  { name:"Kaheel", email:"saalimwali@gmail.com", phoneNumber: 6006307745, Age: 20 },
+  
+])
+.then( res => console.log(res))
+.catch(err => console.log(err))
+
+Mongoose Uses Operation Buffering 
+
+that lets you start using models immediatly without waiting 
+for mongoose to establish a connection to MongoDB
+
+if we have to find data from the collections we use below command and also put conditions on it
+
+Parent.find({}).then(res => console.log(res)) 
+
+Also can Use Parent.FindOne to get only one object
+
+When to update any object we can use 
+
+Parent.updateOne({ name:"Zaid" } , {Age:24})
+.then ( res => console.log(res))
+.catch ( err => console.log(err))
+
+When to update Many 
+
+Parent.updateMany({Age : $gt : {40} } , {salary : 100000})
+
+When to find and update 
+
+Parent.findOneAndUpdate({ email:"saalimwali@gmail.com" } , {name:"Saalim"})
+.then ( res => console.log(res))
+.catch ( err => console.log(err))
+
+using new: true it gives the modified document
+
+Parent.findOneAndUpdate({ email:"saalimwali@gmail.com" } , {name:"Saalim"} , {new : true})
+.then ( res => console.log(res))
+.catch ( err => console.log(err))
+
+
+Find and Update By Id
+
+Parent.findByIdAndUpdate({ _id:'661022f1b2f5bea482d16e65'} , { name:"Salim"} , {new : true})
+.then ( (res) => console.log(res))
+.catch ( (err) => console.log(err))
+
+Delete One 
+
+Parent.deleteOne({name:"Sahil"})
+.then((res) => console.log(res)) 
+
+Delete Many 
+
+Parent.deleteOne({Age : {$gt : 40 } })
+.then((res) => console.log(res))
+
+Find One And Delete
+
+Parent.findOneAndDelete({name:"Sahil"})
+.then((res) => console.log(res))
+
+or 
+
+Parent.findByIdAndDelete({"661022f1b2f5bea482d16e65"})
+.then((res) => console.log(res))
+
+
+Validating Schema and savind object with one requires field shows error 
+
+const UserSchema =  mongoose.Schema({
+  email:{
+    type: 'string',
+    required: true
+  },
+  password:{
+    type:'string',
+    required: true
+  }
+})
+
+const User = mongoose.model('User', UserSchema);
+
+const User1 = new User({
+  password: 'password2'
+})
+
+User1.save()
+.then ( res => console.log(res))
+
+Providing different type error
+
+const User1 = new User({
+  email: 123,                     this would show any error it will convert number to '123'
+  password: 'password2'           but is type is number and we provide abc to it will show Cast Error if we send
+})				  it in this form '123' then there will be no error
+
+User1.save()
+.then ( res => console.log(res))
+
+Can also add default value to out Schema filds
+
+username:{
+    type:'string',
+    default: '@example',
+  },
+
+Can take only given set of values otherwise will show error (enum)
+
+category:{
+    type: 'string',
+    enum: ['User', 'Administrator']
+  }
+
+If we want to update a already existing collection data, its Schema Validation wouldn't work
+
+So in order to show error in case of wrong value updated to the already existing data we use 
+
+Users.findByIdAndUpdate({"some_id"},{enum:"SuperAdmin"},{runValidators:true})
+
+Can give custom error message and show it 
+
+User.findByIdAndUpdate("66116e6e45c65ebdc536c0d8", {email: 'sheikaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}, {runValidators:true})
+.then( res => console.log(res))
+.catch(err => console.log(err.errors.email.properties.message))
+
+
+
+Can check on https://mongoosejs.com
