@@ -22,13 +22,13 @@ app.listen(5000, () => {
 
 app.get('/api', async (req, res) => {
   let users = await User.find();
-  console.log(users);
   res.send(users);
 })
 
 app.post('/api', async(req, res) => {
-  let { email } = req.body;
-  let newUser = new User({ email });
+  let { email , username } = req.body;
+  let newUser = new User({ email , username });
+  console.log(newUser);
   await newUser.save()
     .then((response) => console.log(response))
     .catch((err) => console.log(err));
