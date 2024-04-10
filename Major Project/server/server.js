@@ -20,6 +20,27 @@ app.listen(5000, () => {
   console.log('Server  is Online on port 5000');
 })
 
+app.put('/api/users/:id', async(req, res) => {
+  const {id} = req.params
+  const {email , username } = req.body;
+  let editUser = await User.findByIdAndUpdate(id , {email, username})
+  console.log(editUser);
+})
+
+app.get('/api/users/:id', async (req, res) => {
+    const {id} = req.params
+    let getUser = await User.findById(id);
+    res.send(getUser);
+    console.log(getUser);
+})
+
+app.delete('/api/:id' , async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  let deleteUser = await User.findByIdAndDelete(id)
+  console.log(deleteUser);
+})
+
 app.get('/api', async (req, res) => {
   let users = await User.find();
   res.send(users);

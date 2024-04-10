@@ -26,23 +26,29 @@ const NewUser = () => {
     return (
         <>
             <form>
-                <div>
+                <div className='row'>
+                    <div className='col'>
                     <input
                         type='email'
                         name='email'
                         placeholder='Enter new email address'
+                        className='form-control my-3'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
+                    </div>
+                    <div className='col'>
                     <input
                         type='text'
                         name='username'
+                        className='form-control my-3'
                         placeholder="Enter new username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                     />
-                    <button onClick={sendEmail}>Send</button>
+                    </div>
                 </div>
+                    <button className='btn btn-primary' onClick={sendEmail}>Send</button>
             </form>
         </>
     )
