@@ -33,7 +33,7 @@
 
                 <h5>Updated On</h5>
                 <span><%= chat.updated_at.toString().split(" ")[4] %></span> <br>
-                <!-- <span><%= chat.updated_at %></span> -->
+                <span><%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %></span>
 
                 <br><br>
                 
