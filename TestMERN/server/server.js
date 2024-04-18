@@ -41,6 +41,15 @@ app.delete('/api/:id', async (req, res) => {
 })
 
 
+app.post('/api' , (req, res) => {
+  let { username , email} = req.body
+    let newUser = new User({
+    email:email,
+    username:username
+  })
+  newUser.save().then((res) => console.log(res));
+})
+
 app.get('/api', async (req, res) => {
   let users = await User.find();
   res.send(users);
