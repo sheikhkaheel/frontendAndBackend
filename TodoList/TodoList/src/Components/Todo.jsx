@@ -35,16 +35,16 @@ export default function Todo() {
         <div className="container-lg">
             <h1 className="text-5xl pt-10 text-emerald-400 text-center">Todo List</h1>
             <div className="my-5 text-center">
-                <input className="mr-4 py-2 px-5 rounded-xl" type="text" value={inputItem} onChange={updateInput} />
+                <input className="mr-4 py-2 w-1/2 px-5 rounded-xl bg-neutral-800 text-white" type="text" value={inputItem} onChange={updateInput} />
                 <input type="submit" className="bg-lime-500 rounded-xl px-5 py-2" onClick={submitTodo} />
             </div>
             <div className="bg-neutral-800 mx-40 px-10 py-3">
-                <ul>
+                <ul className="text-white">
                     {todoItem.map((item) => (
                         <li className={`my-3 ${item.completed ? 'line-through' : ''}`} key={item.id}>
                             {item.task}
-                            <span onClick={() => deleteTask(item.id)}>
-                                <i className="fa-solid fa-trash mx-4 text-rose-500"></i>
+                            <span onClick={() => deleteTask(item.id)} className="mx-4">
+                                <i className="fa-solid fa-trash text-rose-500"></i>
                             </span>
                             <span onClick={() => completeTask(item.id)}>
                                 <i className="fa-solid fa-square-check text-green-400"></i>
