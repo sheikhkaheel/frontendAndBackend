@@ -3,6 +3,8 @@ const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
+const Listing = require('./Models/Listings');
+
 
 app.use(cors());
 app.use(express.json());
@@ -22,4 +24,16 @@ app.listen(5000, () => {
 
 app.get('/', (req, res) => {
     res.send('Root')
+})
+
+app.get('/listings', async(req, res) => {
+  const allListings = await Listing.find({})
+  res.send(allListings);
+})
+
+app.get('/listings/:id', async(req, res) => {
+  const {id} = req.params;
+  const listing = await Listing.findById(id);
+  console.log(listing);
+  res.send(listing);
 })
