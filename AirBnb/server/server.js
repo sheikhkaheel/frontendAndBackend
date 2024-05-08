@@ -22,15 +22,28 @@ app.listen(5000, () => {
   
 })
 
+// Root API
 app.get('/', (req, res) => {
     res.send('Root')
 })
 
+
+// All Listings API 
 app.get('/listings', async(req, res) => {
   const allListings = await Listing.find({})
   res.send(allListings);
 })
 
+// New Listings API
+app.post('/listings/new', async (req, res) => {
+  const listing = req.body
+  console.log(listing);
+  const newListing = await new Listing(listing);
+  await newListing.save()
+});
+
+
+// One Listing API
 app.get('/listings/:id', async(req, res) => {
   const {id} = req.params;
   const listing = await Listing.findById(id);

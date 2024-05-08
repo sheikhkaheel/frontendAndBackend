@@ -18,9 +18,9 @@ const listingSchema = new Schema({
     image:{
         type: String,
         set: function(v) {
-            return v ? v : "https://unsplash.com/photos/a-bedroom-with-a-bed-and-a-chair-jUQclDhyIAI";
+            return v ? v : "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60";
         },
-        default: "https://unsplash.com/photos/a-bedroom-with-a-bed-and-a-chair-jUQclDhyIAI"
+        default: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
     },
     price: Number,
     location: String,
