@@ -4,10 +4,11 @@ export default function Navbar() {
         <>
             <nav className="flex border-b-2">
                 <div className="w-28 h-30 p-4">
-                    <img alt="img" className="rounded-full" src="https://th.bing.com/th/id/OIP.NTt6omy6PZm_U3wtLuztHAHaE8?w=251&h=150&c=7&r=0&o=5&dpr=1.5&pid=1.7"></img>
+                    <h3 className="text-4xl font-bold">Air<span className="text-rose-500">Bnb</span></h3>
+                    {/* <img alt="img" className="rounded-full" src="https://th.bing.com/th/id/OIP.NTt6omy6PZm_U3wtLuztHAHaE8?w=251&h=150&c=7&r=0&o=5&dpr=1.5&pid=1.7"></img> */}
                 </div>
                 <div className="w-100 pt-4 flex pb-4">
-                    <input type="text" className="form-control shadow-md w-80 lg:ml-80 border rounded-full pl-8" placeholder="Search"></input>
+                    <input type="text" className="form-control shadow-md w-80 lg:ml-80 border rounded-full pl-8" placeholder="Search By Name"></input>
                     <button className="btn pt-2.5 lg:ml-1 hover:bg-rose-600 inline-flex bg-rose-500 shadow-md text-white rounded-full">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
