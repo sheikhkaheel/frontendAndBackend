@@ -1,0 +1,8 @@
+
+.chat_list::-webkit-scrollbar {
+    display: none !important;
+}
+
+.newChat{
+    left: 27rem !important;
+}

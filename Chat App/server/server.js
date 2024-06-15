@@ -19,8 +19,23 @@ app.listen( '5000' ,()=> {
     console.log('Listening on port 5000')
 })
 
+//Get All Chats Route
 app.get('/', async (req, res) => {
     const Chats = await Chat.find();
     res.send(Chats);
+})
+
+//New Chat Route
+app.post('/chats/new', async(req, res) => {
+  const { from, to, msg, createdOn } = req.body;
+  const newChat = new Chat({
+    from: from,
+    to:to,
+    msg:msg,
+    createdOn: createdOn
+  })
+  newChat.save();
+  console.log(newChat);
+  // console.log(req.body);
 })
 
