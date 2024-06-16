@@ -16,7 +16,7 @@ input::placeholder {
 
 .right { 
     text-align: right;
-    direction: ltr !important;
+    direction: rtl !important;
     margin-bottom: .5rem;
     padding: 0rem .5rem 0rem 0rem;
 }
@@ -43,6 +43,19 @@ input::placeholder {
     border-radius: 1rem;
 }
 
+.msgBox{
+    border: 1px solid black !important;
+    border-radius: 1rem !important;
+}
+
 .newChats::-webkit-scrollbar {
     display: none;
+}
+
+.sendButton{
+    width: 0rem !important;
+}
+
+.clickButton{
+    left: 49rem;
 }
