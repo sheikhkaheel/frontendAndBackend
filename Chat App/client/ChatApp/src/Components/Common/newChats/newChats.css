@@ -1,0 +1,48 @@
+.newChat {
+    left: 0.8rem !important;
+}
+
+input[type='text'],
+input[type='submit'] {
+    border-radius: 0px;
+    background-color: rgb(40, 39, 39) !important;
+    color: rgb(197, 196, 196) !important;
+    border: 1px solid transparent !important;
+}
+
+input::placeholder {
+    color: rgb(203, 202, 202) !important;
+}
+
+.right { 
+    text-align: right;
+    direction: ltr !important;
+    margin-bottom: .5rem;
+    padding: 0rem .5rem 0rem 0rem;
+}
+
+.left {
+    text-align: left;
+    padding: 0rem 0rem 0rem .5rem;
+    margin-bottom: .5rem;
+}
+
+.left_msgs {
+    padding: .5rem .5rem 0rem .5rem;
+    color: rgb(212, 208, 208);
+    display: inline-block !important;
+    border-radius: 1rem;
+    background-color: rgb(42, 42, 42) !important;
+}
+
+.right_msgs {
+    background-color: rgb(37, 94, 69) !important;
+    padding: .5rem .5rem 0rem .5rem;
+    color: rgb(212, 208, 208);
+    display: inline-block !important;
+    border-radius: 1rem;
+}
+
+.newChats::-webkit-scrollbar {
+    display: none;
+}
